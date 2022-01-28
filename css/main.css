@@ -1,0 +1,39 @@
+body {
+    text-align: center;
+    padding: 70px 50px;
+    /* background: #0D1A29; */
+    font-family: "Helvetica Neue", "Open Sans", helvetica, arial, sans-serif;
+    background-image: url("/img/background.jpg");
+}
+
+#text {
+    font-size: 3em;
+    font-weight: 100;
+    color: purple;
+    padding-bottom: 2em;
+}
+button,input{
+    background-color: yellow;
+    opacity:0.8;
+}
+
+#inputContainer {
+    padding-top: 2em;
+}
+
+#timer {
+    font-size: 3em;
+    font-weight: 100;
+    color: purple;
+    position: relative;
+    div {
+        display: inline-block;
+        min-width: 90px;
+        span {
+            color: #B1CDF1;
+            display: block;
+            font-size: .35em;
+            font-weight: 400;
+        }
+    }
+}
