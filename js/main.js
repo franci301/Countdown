@@ -22,8 +22,7 @@ function updateTimer() {
   }
 var firstInterval = setInterval('updateTimer()', 1000 );
   
-function changeDate(){
-    var newDate = document.getElementById("dateChange").value
+function changeDate(newDate){
     future  = Date.parse(newDate);
     now     = new Date();
     diff    = future - now;
@@ -44,12 +43,21 @@ function changeDate(){
         '<div> ' + h + ' <span>hours</span></div> ' +
         '<div> ' + m + ' <span>minutes</span></div> ' +
         '<div> ' + s + ' <span>seconds</span></div> ' ;
+    
 }
 
 function change(){
-    clearInterval(firstInterval);
-    changeDate();
-    setInterval('change()', 1000 )
+    var newDate = document.getElementById("dateChange").value
+    console.log(newDate);
+    if(newDate == ''){
+        document.getElementById("text").innerHTML = "";
+        document.getElementById("text").innerHTML = "Enter Something x";
+    }else{
+        clearInterval(firstInterval);
+        changeDate(newDate);
+        setInterval('change()', 1000 )
+    }
+    
 }
 
 if(document.cookie != ''){
