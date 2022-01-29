@@ -48,7 +48,6 @@ function changeDate(newDate){
 
 function change(){
     var newDate = document.getElementById("dateChange").value
-    console.log(newDate);
     if(newDate == ''){
         document.getElementById("text").innerHTML = "";
         document.getElementById("text").innerHTML = "Enter Something x";
@@ -62,7 +61,6 @@ function change(){
 
 if(document.cookie != ''){
     let decodedCookie = decodeURIComponent(document.cookie);
-    console.log(decodedCookie);
     let ca = decodedCookie.split(';');
     ca = ca[0].split('=')[1];
     document.getElementById("text").innerHTML = "";
