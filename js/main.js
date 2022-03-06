@@ -50,7 +50,7 @@ function change(){
     var newDate = document.getElementById("dateChange").value
     if(newDate == ''){
         document.getElementById("text").innerHTML = "";
-        document.getElementById("text").innerHTML = "Enter Something x";
+        document.getElementById("text").innerHTML = "Enter Something";
     }else{
         clearInterval(firstInterval);
         changeDate(newDate);
