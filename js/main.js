@@ -1,5 +1,5 @@
 function updateTimer() {
-    future  = Date.parse("February 28 2022 13:30");
+    future  = Date.parse("April 18 2022 10:00");
     now     = new Date();
     diff    = future - now;
 
@@ -78,11 +78,11 @@ function changeText(){
         document.getElementById("text").innerHTML = "Enter Something x";
     }else{
         if(document.cookies == null){
-            document.cookie = 'text='+text+'; expires=Tue, 1 Mar 2022 12:00:00 GMT';
+            document.cookie = 'text='+text+'; expires=Tue, 18 April 2022 12:00:00 GMT';
             document.getElementById("text").innerHTML = "";
             document.getElementById("text").innerHTML = "Countdown until " + text;
         }else{
-            document.cookie = 'text='+text+'; expires=Tue, 1 Mar 2022 12:00:00 GMT';
+            document.cookie = 'text='+text+'; expires=Tue, 18 April 2022 12:00:00 GMT';
             document.getElementById("text").innerHTML = "";
             document.getElementById("text").innerHTML = "Countdown until " + text;
         }
