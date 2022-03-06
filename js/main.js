@@ -55,9 +55,9 @@ function changeText() {
                     document.getElementById("text").innerHTML = "Countdown until " + text;
                 }
             }
-
+            event.preventDefault()
+            document.getElementById("btn").click()
         }
-        event.preventDefault()
-        document.getElementById("btn").click()
+
     })
 }
