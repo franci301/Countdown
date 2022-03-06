@@ -39,25 +39,18 @@ console.log(document.cookie);
 function changeText() {
     var input = document.getElementById("getText");
     var text = input.value;
-    input.addEventListener("keyup", function(event) {
-        if (event.keyCode === 13) {
-            if (text == '') {
-                document.getElementById("text").innerHTML = "";
-                document.getElementById("text").innerHTML = "Enter Something x";
-            } else {
-                if (document.cookies == null) {
-                    document.cookie = 'text=' + text + '; expires=Tue, 18 April 2022 12:00:00 GMT';
-                    document.getElementById("text").innerHTML = "";
-                    document.getElementById("text").innerHTML = "Countdown until " + text;
-                } else {
-                    document.cookie = 'text=' + text + '; expires=Tue, 18 April 2022 12:00:00 GMT';
-                    document.getElementById("text").innerHTML = "";
-                    document.getElementById("text").innerHTML = "Countdown until " + text;
-                }
-            }
-            event.preventDefault()
-            document.getElementById("btn").click()
+    if (text == '') {
+        document.getElementById("text").innerHTML = "";
+        document.getElementById("text").innerHTML = "Enter Something x";
+    } else {
+        if (document.cookies == null) {
+            document.cookie = 'text=' + text + '; expires=Tue, 18 April 2022 12:00:00 GMT';
+            document.getElementById("text").innerHTML = "";
+            document.getElementById("text").innerHTML = "Countdown until " + text;
+        } else {
+            document.cookie = 'text=' + text + '; expires=Tue, 18 April 2022 12:00:00 GMT';
+            document.getElementById("text").innerHTML = "";
+            document.getElementById("text").innerHTML = "Countdown until " + text;
         }
-
-    })
+    }
 }
