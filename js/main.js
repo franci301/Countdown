@@ -1,6 +1,6 @@
 function updateTimer() {
 
-    future = Date.parse("April 18 2022 13:30");
+    future = Date.parse("July 5 2022 13:30");
     now = new Date();
     diff = future - now;
 
